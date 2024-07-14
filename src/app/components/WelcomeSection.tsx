@@ -102,13 +102,13 @@ const WelcomeSection: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
             Welcome to <br />
-            <span className="text-[#E0A75E]">CEO Conclave</span>
+            <span className="text-[#E0A75E]">Pharma Industry CEO Conclave</span>
           </h1>
           <p
             ref={subtitleRef}
             className="text-xl md:text-2xl lg:text-3xl text-white mb-8"
           >
-            Building a Culture of Innovation and Excellence
+            Pharma Leadership: Building a Culture of Innovation and Excellence
           </p>
         </div>
         <div
