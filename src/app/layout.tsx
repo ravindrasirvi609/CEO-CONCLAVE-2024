@@ -3,12 +3,61 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import StructuredData from "./components/StructuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CEO Conclave",
-  description: "Nurturing the Future of the Pharmaceuticals Industry",
+  title: "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+  description:
+    "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
+  keywords: [
+    "CEO Conclave",
+    "Pharmaceuticals Industry",
+    "DPU of Pharmacy",
+    "Operant Pharmacy Federation",
+  ],
+  openGraph: {
+    title:
+      "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+    description:
+      "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
+    url: "https://ceo-conclave-2024.vercel.app/",
+    siteName: "CEO Conclave 2024",
+    images: [
+      {
+        url: "https://ceo-conclave-2024.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+    description:
+      "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
+    images: ["https://ceo-conclave-2024.vercel.app/twitter-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +69,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <StructuredData />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
