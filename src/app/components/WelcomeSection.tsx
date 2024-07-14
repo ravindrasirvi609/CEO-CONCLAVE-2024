@@ -118,15 +118,9 @@ const WelcomeSection: React.FC = () => {
             ref={detailsRef}
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
-            <EventDetail
-              icon={<FaCalendarAlt />}
-              text="September 15-16, 2024"
-            />
-            <EventDetail
-              icon={<FaMapMarkerAlt />}
-              text="DPU Convention Center, Pune"
-            />
-            <EventDetail icon={<FaUsers />} text="500+ Industry Leaders" />
+            <EventDetail icon={<FaCalendarAlt />} text="October 19, 2024" />
+            <EventDetail icon={<FaMapMarkerAlt />} text="DPU Pharmacy, Pune" />
+            <EventDetail icon={<FaUsers />} text="250+ Industry Leaders" />
           </div>
           <div ref={buttonRef} className="text-center">
             <a

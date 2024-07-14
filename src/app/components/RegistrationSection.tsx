@@ -176,7 +176,7 @@ const RegistrationSection: React.FC = () => {
             className="w-full bg-[#6c0707] hover:bg-[#E0A75E] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
             disabled={loading}
           >
-            {loading ? "Registering..." : "Register"}
+            {loading ? "Redirecting..." : "Pay Now"}
           </button>
           {error && <p className="text-red-500 mt-4">{error}</p>}
         </motion.form>

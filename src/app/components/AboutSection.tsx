@@ -42,11 +42,11 @@ const AboutSection: React.FC = () => {
             </p>
             <div className="flex items-center mb-4">
               <MdEventSeat className="text-3xl text-[#E0A75E] mr-4" />
-              <p className="text-lg text-[#6c0707]">500+ Seats</p>
+              <p className="text-lg text-[#6c0707]">250+ Seats</p>
             </div>
             <div className="flex items-center">
               <BsFillLightbulbFill className="text-3xl text-[#E0A75E] mr-4" />
-              <p className="text-lg text-[#6c0707]">20+ Innovative Sessions</p>
+              <p className="text-lg text-[#6c0707]">4 Innovative Sessions</p>
             </div>
           </motion.div>
           <motion.div

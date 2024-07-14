@@ -143,7 +143,7 @@ const ContactSection: React.FC = () => {
               </p>
               <p className="flex items-center">
                 <FaPhone className="text-[#E0A75E] mr-2" />
-                <span>+91 1234567890</span>
+                <span>+91 9460971652</span>
               </p>
               <p className="flex items-center">
                 <FaMapMarkerAlt className="text-[#E0A75E] mr-2" />
