@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+gsap.registerPlugin(ScrollTrigger);
 
 const EventDetail = ({
   icon,
@@ -16,60 +14,131 @@ const EventDetail = ({
   icon: React.ReactNode;
   text: string;
 }) => (
-  <div className="flex items-center bg-white p-4 rounded-lg shadow-md">
+  <div className="flex items-center bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
     <div className="text-3xl text-[#E0A75E] mr-4">{icon}</div>
     <span className="text-lg text-[#6c0707]">{text}</span>
   </div>
 );
 
 const WelcomeSection: React.FC = () => {
+  const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const detailsRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const title = titleRef.current;
+    const subtitle = subtitleRef.current;
+    const details = detailsRef.current;
+    const button = buttonRef.current;
+
+    gsap.fromTo(
+      section,
+      { backgroundColor: "#F5E7B2" },
+      {
+        backgroundColor: "#F9D689",
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      title,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+    );
+
+    gsap.fromTo(
+      subtitle,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" }
+    );
+
+    gsap.fromTo(
+      details,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "power3.out" }
+    );
+
+    gsap.fromTo(
+      button,
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        delay: 0.9,
+        ease: "elastic.out(1, 0.5)",
+      }
+    );
+
+    // Parallax effect
+    gsap.to(title, {
+      y: -50,
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
-    <section id="home" className="py-20 px-4 md:px-0">
-      <div className="container mx-auto">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <h1 className="text-5xl md:text-6xl font-bold text-[#6c0707] mb-6">
-            Welcome to CEO Conclave
-          </h1>
-          <p className="text-xl md:text-2xl text-[#E0A75E] mb-8">
-            Nurturing the Future of the Pharmaceuticals Industry
-          </p>
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-8 mt-12"
-        >
-          <EventDetail icon={<FaCalendarAlt />} text="September 15-16, 2024" />
-          <EventDetail
-            icon={<FaMapMarkerAlt />}
-            text="DPU Convention Center, Pune"
-          />
-          <EventDetail icon={<FaUsers />} text="500+ Industry Leaders" />
-        </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-12"
-        >
-          <a
-            href="#registration"
-            className="bg-[#6c0707] text-[#F5E7B2] px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#E0A75E] hover:text-[#6c0707] transition duration-300"
+    <>
+      <section
+        ref={sectionRef}
+        id="home"
+        className="py-20 px-4 md:px-0 min-h-screen flex items-center justify-center relative overflow-hidden"
+      >
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h1
+              ref={titleRef}
+              className="text-6xl md:text-7xl font-bold text-[#6c0707] mb-6 leading-tight"
+            >
+              Welcome to <br />
+              <span className="text-[#E0A75E]">CEO Conclave</span>
+            </h1>
+            <p
+              ref={subtitleRef}
+              className="text-2xl md:text-3xl text-[#6c0707] mb-8"
+            >
+              Nurturing the Future of the Pharmaceuticals Industry
+            </p>
+          </div>
+          <div
+            ref={detailsRef}
+            className="flex flex-wrap justify-center gap-8 mb-12"
           >
-            Register Now
-          </a>
-        </motion.div>
-      </div>
-    </section>
+            <EventDetail
+              icon={<FaCalendarAlt />}
+              text="September 15-16, 2024"
+            />
+            <EventDetail
+              icon={<FaMapMarkerAlt />}
+              text="DPU Convention Center, Pune"
+            />
+            <EventDetail icon={<FaUsers />} text="500+ Industry Leaders" />
+          </div>
+          <div ref={buttonRef} className="text-center">
+            <a
+              href="#registration"
+              className="bg-[#6c0707] text-[#F5E7B2] px-10 py-4 rounded-full text-xl font-semibold hover:bg-[#E0A75E] hover:text-[#6c0707] transition duration-300 inline-block transform hover:scale-105"
+            >
+              Register Now
+            </a>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F9D689] opacity-50"></div>
+      </section>
+    </>
   );
 };
 
