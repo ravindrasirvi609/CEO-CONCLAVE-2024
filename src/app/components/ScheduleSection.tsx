@@ -44,17 +44,17 @@ const ScheduleSection: React.FC = () => {
     {
       time: "10:00 AM - 11:30 AM",
       title: "Keynote: The Future of Pharma",
-      speaker: "Dr. Jane Doe",
+      speaker: "Multiple Speakers, Announcing Soon",
     },
     {
       time: "11:45 AM - 01:00 PM",
       title: "Panel: Regulatory Challenges in 2024",
-      speaker: "Multiple Speakers",
+      speaker: "Multiple Speakers, Announcing Soon",
     },
     {
       time: "02:00 PM - 03:30 PM",
       title: "Workshop: AI in Drug Discovery",
-      speaker: "Prof. John Smith",
+      speaker: "Multiple Speakers, Announcing Soon",
     },
     {
       time: "03:45 PM - 05:00 PM",

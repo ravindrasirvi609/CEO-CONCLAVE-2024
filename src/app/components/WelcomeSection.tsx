@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
@@ -15,7 +15,7 @@ const EventDetail = ({
   icon: React.ReactNode;
   text: string;
 }) => (
-  <div className="flex items-center bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+  <div className="flex items-center bg-white bg-opacity-90 p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
     <div className="text-3xl text-[#E0A75E] mr-4">{icon}</div>
     <span className="text-lg text-[#6c0707]">{text}</span>
   </div>
@@ -34,20 +34,6 @@ const WelcomeSection: React.FC = () => {
     const subtitle = subtitleRef.current;
     const details = detailsRef.current;
     const button = buttonRef.current;
-
-    gsap.fromTo(
-      section,
-      { backgroundColor: "#F5E7B2" },
-      {
-        backgroundColor: "#F9D689",
-        scrollTrigger: {
-          trigger: section,
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-        },
-      }
-    );
 
     gsap.fromTo(
       title,
@@ -92,48 +78,52 @@ const WelcomeSection: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <section
-        ref={sectionRef}
-        id="home"
-        className="py-20 px-4 md:px-0 min-h-screen flex items-center justify-center relative overflow-hidden"
-      >
-        <div className="container mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h1
-              ref={titleRef}
-              className="text-6xl md:text-7xl font-bold text-[#6c0707] mb-6 leading-tight"
-            >
-              Welcome to <br />
-              <span className="text-[#E0A75E]">CEO Conclave</span>
-            </h1>
-            <p
-              ref={subtitleRef}
-              className="text-2xl md:text-3xl text-[#6c0707] mb-8"
-            >
-              Nurturing the Future of the Pharmaceuticals Industry
-            </p>
-          </div>
-          <div
-            ref={detailsRef}
-            className="flex flex-wrap justify-center gap-8 mb-12"
+    <section
+      ref={sectionRef}
+      id="home"
+      className="py-20 px-4 md:px-0 min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
+      <div className="absolute inset-0 w-full h-full">
+        <iframe
+          src="https://www.youtube.com/embed/3_KhDq0Yx1I?si=pBSFmNjSb-jwhMJq&start=7&autoplay=1&mute=1&loop=1&controls=0&playlist=3_KhDq0Yx1I"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        ></iframe>
+      </div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="container mx-auto relative z-10">
+        <div className="text-center mb-12">
+          <h1
+            ref={titleRef}
+            className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            <EventDetail icon={<FaCalendarAlt />} text="October 19, 2024" />
-            <EventDetail icon={<FaMapMarkerAlt />} text="DPU Pharmacy, Pune" />
-            <EventDetail icon={<FaUsers />} text="250+ Industry Leaders" />
-          </div>
-          <div ref={buttonRef} className="text-center">
-            <a
-              href="#registration"
-              className="bg-[#6c0707] text-[#F5E7B2] px-10 py-4 rounded-full text-xl font-semibold hover:bg-[#E0A75E] hover:text-[#6c0707] transition duration-300 inline-block transform hover:scale-105"
-            >
-              Register Now
-            </a>
-          </div>
+            Welcome to <br />
+            <span className="text-[#E0A75E]">CEO Conclave</span>
+          </h1>
+          <p ref={subtitleRef} className="text-2xl md:text-3xl text-white mb-8">
+            Building a Culture of Innovation and Excellence
+          </p>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F9D689] opacity-50"></div>
-      </section>
-    </>
+        <div
+          ref={detailsRef}
+          className="flex flex-wrap justify-center gap-8 mb-12"
+        >
+          <EventDetail icon={<FaCalendarAlt />} text="October 19, 2024" />
+          <EventDetail icon={<FaMapMarkerAlt />} text="DPU Pharmacy, Pune" />
+          <EventDetail icon={<FaUsers />} text="250+ Industry Leaders" />
+        </div>
+        <div ref={buttonRef} className="text-center">
+          <a
+            href="#registration"
+            className="bg-[#E0A75E] text-[#6c0707] px-10 py-4 rounded-full text-xl font-semibold hover:bg-[#6c0707] hover:text-[#E0A75E] transition duration-300 inline-block transform hover:scale-105"
+          >
+            Register Now
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

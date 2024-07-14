@@ -8,7 +8,7 @@ import StructuredData from "./components/StructuredData";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+  title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
   description:
     "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
   keywords: [
@@ -18,8 +18,7 @@ export const metadata: Metadata = {
     "Operant Pharmacy Federation",
   ],
   openGraph: {
-    title:
-      "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+    title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
     description:
       "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
     url: "https://ceo-conclave-2024.vercel.app/",
@@ -36,8 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "CEO Conclave 2024: Nurturing Future of the Pharmaceuticals Industry",
+    title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
     description:
       "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
     images: ["https://ceo-conclave-2024.vercel.app/twitter-image.jpg"],
