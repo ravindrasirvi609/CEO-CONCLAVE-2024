@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser, FaEnvelope, FaPhone, FaBuilding } from "react-icons/fa";
+import axios from "axios";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -17,6 +18,8 @@ const RegistrationSection: React.FC = () => {
     affiliation: "",
     registrationType: "student",
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -24,10 +27,38 @@ const RegistrationSection: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Registration successful!");
+    setLoading(true);
+    setError("");
+    try {
+      const response = await axios.post("/api/registration", formData);
+      console.log(response.data);
+      alert("Registration successful! Redirecting to payment...");
+
+      // Define payment gateway URLs
+      const paymentUrls = {
+        student: "https://example.com/payment/student",
+        teacher: "https://example.com/payment/teacher",
+        professional: "https://example.com/payment/professional",
+      };
+
+      // Redirect to the appropriate payment gateway
+      const paymentUrl =
+        paymentUrls[formData.registrationType as keyof typeof paymentUrls];
+      if (paymentUrl) {
+        window.location.href = paymentUrl;
+      } else {
+        throw new Error("Invalid registration type");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setError(
+        "There was an error submitting your registration. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -143,9 +174,11 @@ const RegistrationSection: React.FC = () => {
           <button
             type="submit"
             className="w-full bg-[#6c0707] hover:bg-[#E0A75E] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+            disabled={loading}
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
+          {error && <p className="text-red-500 mt-4">{error}</p>}
         </motion.form>
       </div>
     </section>

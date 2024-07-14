@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import axios from "axios";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -10,9 +11,37 @@ const fadeIn = {
 };
 
 const ContactSection: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent successfully!");
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      const response = await axios.post("api/contact", {
+        name,
+        email,
+        phone,
+        message,
+      });
+      setSuccess("Message sent successfully!");
+      console.log(response.data);
+    } catch (error) {
+      setError("Failed to send message. Please try again later.");
+      console.error("API call failed:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,6 +92,18 @@ const ContactSection: React.FC = () => {
                 />
               </div>
               <div>
+                <label htmlFor="phone" className="block text-[#6c0707] mb-2">
+                  Phone
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  required
+                  className="w-full px-3 py-2 border border-[#E0A75E] rounded text-[#6c0707]"
+                />
+              </div>
+              <div>
                 <label htmlFor="message" className="block text-[#6c0707] mb-2">
                   Message
                 </label>
@@ -77,9 +118,12 @@ const ContactSection: React.FC = () => {
               <button
                 type="submit"
                 className="bg-[#6c0707] text-white px-6 py-3 rounded-lg hover:bg-[#E0A75E] transition duration-300"
+                disabled={loading}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
+              {error && <p className="text-red-500 mt-4">{error}</p>}
+              {success && <p className="text-green-500 mt-4">{success}</p>}
             </form>
           </motion.div>
           <motion.div
