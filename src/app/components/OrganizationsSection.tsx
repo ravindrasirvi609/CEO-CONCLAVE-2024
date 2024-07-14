@@ -39,10 +39,9 @@ const OrganizationsSection: React.FC = () => {
               </div>
               <p className="text-[#6c0707] mb-4">
                 Operant Pharmacy Federation (OPF) aims to spread more about the
-                Pharmacy Profession by organising different exhibitions,
-                conferences, workshops, seminars, and camps. We feel proud that
-                OPF is one of the internationally recognised easels for
-                Biomedical and Pharmaceutical study.
+                Pharmacy Profession by organising different value added
+                programs. We feel proud that OPF is one of the internationally
+                recognised easels for Biomedical and Pharmaceutical study.
               </p>
               <p className="text-[#6c0707] mb-4">
                 With high-quality reviews, original research work, short
@@ -86,19 +85,26 @@ const OrganizationsSection: React.FC = () => {
                 </h3>
               </div>
               <p className="text-[#6c0707] mb-4">
-                Dr. D. Y. Patil Institute of Pharmaceutical Sciences & Research
-                is a premier institution dedicated to excellence in
-                pharmaceutical education and research.
+                Dr. D. Y. Patil Institute of Pharmaceutical Sciences and
+                Research, Pimpri, Pune was established with the aim to impart
+                quality pharmacy education and training to cater the needs of
+                the pharmacy profession and society at large. The journey
+                started in 1994 by introducing the first Pharmacy institute in
+                the Pimpri Chinchwad area of Pune with B. Pharm course.
               </p>
               <p className="text-[#6c0707] mb-4">
-                With state-of-the-art facilities and a team of experienced
-                faculty members, the institute provides a conducive environment
-                for learning and innovation in the field of pharmacy.
+                The visionary leadership of Hon. Dr. P. D. Patil and dynamism of
+                Dr. Somnath Patil has steered it to its present iconic status;
+                offering Diploma Programme (D. Pharm.), undergraduate program B.
+                Pharm and Pharm. D. to both national and international students,
+                post-graduate program (M. Pharm) in Pharmaceutics, Pharmacology
+                and Quality Assurance Techniques and doctoral (Ph. D.) program.
               </p>
-              <p className="text-[#6c0707]">
-                The institute is committed to producing skilled professionals
-                who can contribute significantly to the pharmaceutical industry
-                and healthcare sector.
+              <p className="text-[#6c0707] mb-4">
+                All the courses are recognized by Pharmacy Council of India
+                (PCI) and Approved by AICTE; affiliated to Savitribai Phule Pune
+                University, Pune and Maharashtra State Board of Technical
+                Education.
               </p>
             </div>
           </motion.div>

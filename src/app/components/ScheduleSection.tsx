@@ -42,24 +42,39 @@ const ScheduleSection: React.FC = () => {
       speaker: "N/A",
     },
     {
-      time: "10:00 AM - 11:30 AM",
+      time: "10:00 AM - 10:30 AM",
+      title: "Opening Ceremony",
+      speaker: "Chief Guest and Dignitaries",
+    },
+    {
+      time: "10:30 AM - 11:00 AM",
       title: "Keynote: The Future of Pharma",
+      speaker: "Announcing Soon",
+    },
+    {
+      time: "11:00 AM - 12:00 PM",
+      title: "Panel-1: Regulatory Challenges in 2024",
       speaker: "Multiple Speakers, Announcing Soon",
     },
     {
-      time: "11:45 AM - 01:00 PM",
-      title: "Panel: Regulatory Challenges in 2024",
+      time: "12:00 PM - 01:00 PM",
+      title: "Panel-2: AI in Drug Discovery",
       speaker: "Multiple Speakers, Announcing Soon",
     },
     {
-      time: "02:00 PM - 03:30 PM",
-      title: "Workshop: AI in Drug Discovery",
+      time: "02:00 PM - 03:00 PM",
+      title: "Panel-3: The Future of Pharma Manufacturing",
       speaker: "Multiple Speakers, Announcing Soon",
     },
     {
-      time: "03:45 PM - 05:00 PM",
-      title: "Closing Remarks and Networking",
-      speaker: "Organizing Committee",
+      time: "03:00 PM - 04:00 PM",
+      title: "Panel-4: Emerging Technologies in Pharma",
+      speaker: "Multiple Speakers, Announcing Soon",
+    },
+    {
+      time: "04:00 PM - 05:00 PM",
+      title: "Closing Ceremony and Networking",
+      speaker: "N/A",
     },
   ];
 
@@ -73,7 +88,7 @@ const ScheduleSection: React.FC = () => {
           variants={fadeIn}
           className="text-4xl font-bold text-center text-[#6c0707] mb-12"
         >
-          Event Schedule
+          Program Schedule
         </motion.h2>
         <motion.div
           initial="hidden"
