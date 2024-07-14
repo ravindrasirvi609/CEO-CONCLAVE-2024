@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>Email: info@ceoconclave.com</p>
+            <p>Email: admin@opf.org.in</p>
             <p>Phone: +91 1234567890</p>
             <p>Address: DPU Convention Center, Pune, India</p>
           </div>

@@ -95,7 +95,7 @@ const ContactSection: React.FC = () => {
             <div className="space-y-4">
               <p className="flex items-center">
                 <FaEnvelope className="text-[#E0A75E] mr-2" />
-                <span>info@ceoconclave.com</span>
+                <span>admin@opf.org.in</span>
               </p>
               <p className="flex items-center">
                 <FaPhone className="text-[#E0A75E] mr-2" />
@@ -112,7 +112,7 @@ const ContactSection: React.FC = () => {
               </h4>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.88108531489853!3d18.45945687744643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eac85230ba47%3A0x871eddd0a8a0a108!2sDr.%20D.Y.%20Patil%20Medical%20College%2C%20Hospital%20%26%20Research%20Centre!5e0!3m2!1sen!2sin!4v1652941641755!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d292616.0608921434!2d73.61076341031121!3d18.90313902816384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8612b48fd3f%3A0xf080ec8435d265c6!2sDr.%20D.%20Y.%20Patil%20Vidyapeeth%2C%20Pune!5e0!3m2!1sen!2sin!4v1720938087480!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
