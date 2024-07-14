@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ const WelcomeSection: React.FC = () => {
   const detailsRef = useRef(null);
   const buttonRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const section = sectionRef.current;
     const title = titleRef.current;
     const subtitle = subtitleRef.current;
