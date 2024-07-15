@@ -23,44 +23,44 @@ export async function POST(req: NextRequest) {
     };
 
     const adminEmailTemplate = (newUser: any) => `
-      <html>
-        <body style="font-family: Arial, sans-serif; background-color: #F5E7B2; margin: 0; padding: 0;">
-          <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 10px;">
-            <h1 style="color: #6c0707; text-align: center;">New Registration for CEO Conclave</h1>
-            <div style="background-color: #F9D689; padding: 15px; border-radius: 5px; margin-top: 20px;">
-              <p><strong>Name:</strong> ${newUser.name}</p>
-              <p><strong>Email:</strong> ${newUser.email}</p>
-              <p><strong>Phone:</strong> ${newUser.phone}</p>
-              <p><strong>Affiliation:</strong> ${newUser.affiliation}</p>
-              <p><strong>Registration Type:</strong> ${newUser.registrationType}</p>
-            </div>
-          </div>
-        </body>
-      </html>
+    <html>
+    <body style="font-family: 'Arial', sans-serif; background-color: #F5E7B2; margin: 0; padding: 70px;">
+      <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #6c0707; text-align: center; font-size: 28px; margin-bottom: 30px;">New Registration for CEO Conclave</h1>
+        <div style="background-color: #F9D689; padding: 30px; border-radius: 10px; margin-top: 30px;">
+          <p style="margin: 15px 0; font-size: 16px;"><strong style="color: #6c0707;">Name:</strong> ${newUser.name}</p>
+          <p style="margin: 15px 0; font-size: 16px;"><strong style="color: #6c0707;">Email:</strong> ${newUser.email}</p>
+          <p style="margin: 15px 0; font-size: 16px;"><strong style="color: #6c0707;">Phone:</strong> ${newUser.phone}</p>
+          <p style="margin: 15px 0; font-size: 16px;"><strong style="color: #6c0707;">Affiliation:</strong> ${newUser.affiliation}</p>
+          <p style="margin: 15px 0; font-size: 16px;"><strong style="color: #6c0707;">Registration Type:</strong> ${newUser.registrationType}</p>
+        </div>
+      </div>
+    </body>
+  </html>
     `;
 
     const userEmailTemplate = (newUser: any) => `
       <html>
-        <body style="font-family: Arial, sans-serif; background-color: #F5E7B2; margin: 0; padding: 0;">
-          <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 10px;">
-            <h1 style="color: #6c0707; text-align: center;">CEO Conclave 2024</h1>
-            <h2 style="color: #E0A75E; text-align: center;">Nurturing Future of the Pharmaceuticals Industry</h2>
-            <p style="color: #6c0707; font-size: 18px; text-align: center;">
-              Thank You for Registering, ${newUser.name}!
-            </p>
-            <div style="background-color: #F9D689; padding: 15px; border-radius: 5px; margin-top: 20px;">
-              <p>We're excited to have you join us for the CEO Conclave 2024!</p>
-              <p>The event is organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation.</p>
-              <p>Your registration details:</p>
-              <ul>
-                <li>Registration Type: ${newUser.registrationType}</li>
-                <li>Affiliation: ${newUser.affiliation}</li>
-              </ul>
-              <p>We'll be in touch with more information as the event approaches.</p>
-            </div>
-          </div>
-        </body>
-      </html>
+    <body style="font-family: 'Arial', sans-serif; background-color: #F5E7B2; margin: 0; padding: 70px;">
+      <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #6c0707; text-align: center; font-size: 28px; margin-bottom: 20px;">CEO Conclave 2024</h1>
+        <h2 style="color: #E0A75E; text-align: center; font-size: 22px; margin-bottom: 30px;">Nurturing Future of the Pharmaceuticals Industry</h2>
+        <p style="color: #6c0707; font-size: 20px; text-align: center; margin-bottom: 30px;">
+          Thank You for Registering, ${newUser.name}!
+        </p>
+        <div style="background-color: #F9D689; padding: 30px; border-radius: 10px; margin-top: 30px;">
+          <p style="margin: 15px 0; font-size: 16px;">We're excited to have you join us for the CEO Conclave 2024!</p>
+          <p style="margin: 15px 0; font-size: 16px;">The event is organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation.</p>
+          <p style="margin: 20px 0 10px; font-size: 18px; font-weight: bold;">Your registration details:</p>
+          <ul style="margin: 0 0 20px; padding-left: 20px;">
+            <li style="margin: 10px 0; font-size: 16px;">Registration Type: ${newUser.registrationType}</li>
+            <li style="margin: 10px 0; font-size: 16px;">Affiliation: ${newUser.affiliation}</li>
+          </ul>
+          <p style="margin: 15px 0; font-size: 16px;">We'll be in touch with more information as the event approaches.</p>
+        </div>
+      </div>
+    </body>
+  </html>
     `;
 
     const resend = new Resend(apiKey);
