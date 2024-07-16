@@ -38,9 +38,10 @@ const RegistrationSection: React.FC = () => {
 
       // Define payment gateway URLs
       const paymentUrls = {
-        student: "https://example.com/payment/student",
-        teacher: "https://example.com/payment/teacher",
-        professional: "https://example.com/payment/professional",
+        student: "https://rzp.io/l/buJcxni4L",
+        teacher: "https://rzp.io/l/TuvjZq8",
+        professional: "https://rzp.io/l/UajHcUkX",
+        opfmembers: "https://rzp.io/l/ehBNiiGkh",
       };
 
       // Redirect to the appropriate payment gateway
@@ -169,6 +170,7 @@ const RegistrationSection: React.FC = () => {
               <option value="professional">
                 Industry Professional (3500 INR)
               </option>
+              <option value="opfmembers">OPF Members (1500 INR)</option>
             </select>
           </div>
           <button
