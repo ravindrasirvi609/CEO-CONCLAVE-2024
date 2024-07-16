@@ -90,9 +90,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div>
-          <Image src="/ovc.png" alt="CEO Conclave" width={200} height={50} />
-        </div>
         <div className="mt-8 border-t border-[#E0A75E] pt-8 text-center">
           <p>&copy; 2024 CEO Conclave. All rights reserved.</p>
         </div>
