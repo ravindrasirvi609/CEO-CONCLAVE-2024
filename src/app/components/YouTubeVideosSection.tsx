@@ -46,11 +46,11 @@ const YouTubeVideosSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className="py-8 sm:py-12 md:py-16 bg-cream">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-maroon text-center mb-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-maroon text-center mb-6 sm:mb-8 md:mb-12">
           Our Past Events
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {videoIds.map((videoId, index) => (
             <div
               key={videoId}
@@ -61,16 +61,19 @@ const YouTubeVideosSection: React.FC = () => {
               }}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <YouTube
-                videoId={videoId}
-                opts={{
-                  width: "100%",
-                  height: "240",
-                  playerVars: {
-                    autoplay: 0,
-                  },
-                }}
-              />
+              <div className="aspect-w-16 aspect-h-9">
+                <YouTube
+                  videoId={videoId}
+                  opts={{
+                    width: "100%",
+                    height: "100%",
+                    playerVars: {
+                      autoplay: 0,
+                    },
+                  }}
+                  className="absolute top-0 left-0 w-full h-full"
+                />
+              </div>
             </div>
           ))}
         </div>
