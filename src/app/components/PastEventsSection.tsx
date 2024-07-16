@@ -19,23 +19,23 @@ const PastEventsSection: React.FC = () => {
   // Replace these with your actual event images
   const eventImages: EventImage[] = [
     {
-      src: "/image/097A3080.jpg",
+      src: "/097A3080.jpg",
       alt: "Event 1",
     },
-    { src: "/image/097A3109.jpg", alt: "Event 3" },
-    { src: "/image/097A3130.jpg", alt: "Event 4" },
-    { src: "/image/097A3133.jpg", alt: "Event 5" },
-    { src: "/image/097A3150.jpg", alt: "Event 6" },
-    { src: "/image/097A3156.jpg", alt: "Event 7" },
-    { src: "/image/097A3195.jpg", alt: "Event 8" },
-    { src: "/image/097A3223.jpg", alt: "Event 9" },
-    { src: "/image/097A3238.jpg", alt: "Event 10" },
-    { src: "/image/097A3260.jpg", alt: "Event 11" },
-    { src: "/image/097A3272.jpg", alt: "Event 12" },
-    { src: "/image/097A3282.jpg", alt: "Event 13" },
-    { src: "/image/097A3318.jpg", alt: "Event 14" },
-    { src: "/image/04.jpg", alt: "Event 15" },
-    { src: "/image/06.jpg", alt: "Event 16" },
+    { src: "/097A3109.jpg", alt: "Event 3" },
+    { src: "/097A3130.jpg", alt: "Event 4" },
+    { src: "/097A3133.jpg", alt: "Event 5" },
+    { src: "/097A3150.jpg", alt: "Event 6" },
+    { src: "/097A3156.jpg", alt: "Event 7" },
+    { src: "/097A3195.jpg", alt: "Event 8" },
+    { src: "/097A3223.jpg", alt: "Event 9" },
+    { src: "/097A3238.jpg", alt: "Event 10" },
+    { src: "/097A3260.jpg", alt: "Event 11" },
+    { src: "/097A3272.jpg", alt: "Event 12" },
+    { src: "/097A3282.jpg", alt: "Event 13" },
+    { src: "/097A3318.jpg", alt: "Event 14" },
+    { src: "/04.jpg", alt: "Event 15" },
+    { src: "/06.jpg", alt: "Event 16" },
   ];
 
   useGSAP(() => {
@@ -88,8 +88,8 @@ const PastEventsSection: React.FC = () => {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  layout="fill"
-                  objectFit="cover"
+                  height={256}
+                  width={384}
                   className="transition-transform duration-300 hover:scale-105"
                 />
               </div>
