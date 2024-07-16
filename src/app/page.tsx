@@ -5,6 +5,7 @@ import ScheduleSection from "./components/ScheduleSection";
 import RegistrationSection from "./components/RegistrationSection";
 import ContactSection from "./components/ContactSection";
 import OrganizationsSection from "./components/OrganizationsSection";
+import YouTubeVideosSection from "./components/YouTubeVideosSection";
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
       <WelcomeSection />
       <AboutSection />
       <OrganizationsSection />
-
       <ScheduleSection />
       <RegistrationSection />
+      <YouTubeVideosSection />
+
       <ContactSection />
     </div>
   );
