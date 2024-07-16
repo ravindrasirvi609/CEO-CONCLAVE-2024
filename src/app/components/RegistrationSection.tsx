@@ -33,9 +33,6 @@ const RegistrationSection: React.FC = () => {
     setError("");
     try {
       const response = await axios.post("/api/registration", formData);
-      console.log(response.data);
-      alert("Registration successful! Redirecting to payment...");
-
       // Define payment gateway URLs
       const paymentUrls = {
         student: "https://rzp.io/l/buJcxni4L",
@@ -165,12 +162,12 @@ const RegistrationSection: React.FC = () => {
               required
               className="block w-full bg-white border border-[#E0A75E] text-[#6c0707] py-3 px-4 rounded leading-tight focus:outline-none focus:border-[#6c0707]"
             >
-              <option value="student">Student (1750 INR)</option>
-              <option value="teacher">Teacher (2500 INR)</option>
+              <option value="student">Student (1750 ₹)</option>
+              <option value="teacher">Academia (2500 ₹)</option>
               <option value="professional">
-                Industry Professional (3500 INR)
+                Industry Professional (3500 ₹)
               </option>
-              <option value="opfmembers">OPF Members (1500 INR)</option>
+              <option value="opfmembers">OPF Members (1500 ₹)</option>
             </select>
           </div>
           <button
