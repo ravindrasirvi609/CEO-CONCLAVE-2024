@@ -6,6 +6,7 @@ import RegistrationSection from "./components/RegistrationSection";
 import ContactSection from "./components/ContactSection";
 import OrganizationsSection from "./components/OrganizationsSection";
 import YouTubeVideosSection from "./components/YouTubeVideosSection";
+import PastEventsSection from "./components/PastEventsSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <AboutSection />
       <OrganizationsSection />
       <ScheduleSection />
+      <PastEventsSection />
+
       <RegistrationSection />
       <YouTubeVideosSection />
 
