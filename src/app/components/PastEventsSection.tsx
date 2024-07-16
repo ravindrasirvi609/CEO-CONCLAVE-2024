@@ -19,29 +19,23 @@ const PastEventsSection: React.FC = () => {
   // Replace these with your actual event images
   const eventImages: EventImage[] = [
     {
-      src: "https://images.unsplash.com/photo-1720849644323-499c62694fbb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/image/097A3080.jpg",
       alt: "Event 1",
     },
-    {
-      src: "https://images.unsplash.com/photo-1720999748915-ac0bfdbab7d5?q=80&w=3348&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Event 2",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1718554517649-ce6ed88a9a5d?q=80&w=2916&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Event 3",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1720986073460-d34ea04ac7bb?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Event 4",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1718554517780-b9ca6513c4c3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Event 5",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1720858187324-8bfd71b7929a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Event 6",
-    },
+    { src: "/image/097A3109.jpg", alt: "Event 3" },
+    { src: "/image/097A3130.jpg", alt: "Event 4" },
+    { src: "/image/097A3133.jpg", alt: "Event 5" },
+    { src: "/image/097A3150.jpg", alt: "Event 6" },
+    { src: "/image/097A3156.jpg", alt: "Event 7" },
+    { src: "/image/097A3195.jpg", alt: "Event 8" },
+    { src: "/image/097A3223.jpg", alt: "Event 9" },
+    { src: "/image/097A3238.jpg", alt: "Event 10" },
+    { src: "/image/097A3260.jpg", alt: "Event 11" },
+    { src: "/image/097A3272.jpg", alt: "Event 12" },
+    { src: "/image/097A3282.jpg", alt: "Event 13" },
+    { src: "/image/097A3318.jpg", alt: "Event 14" },
+    { src: "/image/04.jpg", alt: "Event 15" },
+    { src: "/image/06.jpg", alt: "Event 16" },
   ];
 
   useGSAP(() => {
