@@ -45,7 +45,7 @@ const YouTubeVideosSection: React.FC = () => {
   const videoIds = ["kx5z0XNhVYk", "dTuHXUt1weQ", "ody2LBp7zP0"];
 
   return (
-    <section ref={sectionRef} className="py-16 bg-cream">
+    <section ref={sectionRef} className="py-8 sm:py-12 md:py-16 bg-cream">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-maroon text-center mb-12">
           Our Past Events
