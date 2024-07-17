@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StructuredData from "./components/StructuredData";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     "Pharmaceuticals Industry",
     "DPU of Pharmacy",
     "Operant Pharmacy Federation",
+    "Pharmaceuticals",
+    "Pharmacy Industry",
+    "Pharmacy Federation",
+    "Pharmacy Conclave",
+    "Pharmacy Innovation",
+    "Pharmacy Excellence",
+    "Pharmacy",
   ],
   openGraph: {
     title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
@@ -70,6 +77,7 @@ export default function RootLayout({
         <main>
           <StructuredData />
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>
