@@ -162,7 +162,7 @@ const RegistrationSection: React.FC = () => {
               required
               className="block w-full bg-white border border-[#E0A75E] text-[#6c0707] py-3 px-4 rounded leading-tight focus:outline-none focus:border-[#6c0707]"
             >
-              <option value="student">Student (1750 ₹)</option>
+              <option value="student">Student (1770 ₹)</option>
               <option value="teacher">Academia (2500 ₹)</option>
               <option value="professional">
                 Industry Professional (3500 ₹)
