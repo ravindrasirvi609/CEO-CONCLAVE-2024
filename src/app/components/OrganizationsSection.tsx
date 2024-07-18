@@ -58,15 +58,6 @@ const OrganizationsSection: React.FC = () => {
                 practices, that are essential to ensure the success of our
                 pharmacy profession.
               </p>
-              <p className="text-[#6c0707]">
-                We are extremely glad to help researchers in their dissertation
-                works as we believe that all researchers are contributing
-                equally to the field of Pharmacy and Biomedical. Our editors
-                help them in their works and honour them for their efforts in
-                the same field. The research papers are also made available
-                online which helps students and other researchers in knowing
-                more about the industry.
-              </p>
             </div>
           </motion.div>
           <motion.div
@@ -98,13 +89,8 @@ const OrganizationsSection: React.FC = () => {
                 offering Diploma Programme (D. Pharm.), undergraduate program B.
                 Pharm and Pharm. D. to both national and international students,
                 post-graduate program (M. Pharm) in Pharmaceutics, Pharmacology
-                and Quality Assurance Techniques and doctoral (Ph. D.) program.
-              </p>
-              <p className="text-[#6c0707] mb-4">
-                All the courses are recognized by Pharmacy Council of India
-                (PCI) and Approved by AICTE; affiliated to Savitribai Phule Pune
-                University, Pune and Maharashtra State Board of Technical
-                Education.
+                and Quality Assurance Techniques, MBA(Pharmaceutical management)
+                & doctoral (Ph. D.) program.
               </p>
             </div>
           </motion.div>
