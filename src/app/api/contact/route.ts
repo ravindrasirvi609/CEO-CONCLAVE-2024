@@ -78,7 +78,11 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "admin@opf.org.in",
-        to: ["ravi.sirvi609@gmail.com"],
+        to: [
+          "ravi.sirvi609@gmail.com",
+          "rakesh.mishra@dypvp.edu.in",
+          "admin@opf.org.in",
+        ],
         subject: `${newUser.name} wants to connect with you!`,
         html: adminEmailTemplate(newUser),
       }),

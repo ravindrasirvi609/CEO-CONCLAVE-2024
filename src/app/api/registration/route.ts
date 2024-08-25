@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "admin@opf.org.in",
-        to: ["ravi.sirvi609@gmail.com"],
+        to: ["ravi.sirvi609@gmail.com", "admin@opf.org.in"],
         subject: `New registration: ${newUser.name}`,
         html: adminEmailTemplate(newUser),
       }),
