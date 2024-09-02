@@ -5,36 +5,46 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StructuredData from "./components/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
+  metadataBase: new URL("https://ceo.opf.org.in"),
+  title: {
+    default:
+      "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
+    template: "%s | CEO Conclave 2024",
+  },
   description:
-    "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
+    "Join the CEO Conclave 2024, organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation. Shape the future of the pharmaceuticals industry through innovation and excellence.",
   keywords: [
-    "CEO Conclave",
+    "CEO Conclave 2024",
     "Pharmaceuticals Industry",
     "DPU of Pharmacy",
     "Operant Pharmacy Federation",
-    "Pharmaceuticals",
-    "Pharmacy Industry",
-    "Pharmacy Federation",
-    "Pharmacy Conclave",
     "Pharmacy Innovation",
-    "Pharmacy Excellence",
-    "Pharmacy",
+    "Pharmaceutical Excellence",
+    "Industry Leadership",
+    "Pharmacy Trends",
+    "Healthcare Innovation",
+    "Pharmaceutical Business Strategy",
   ],
+  authors: [{ name: "Operant Pharmacy Federation" }],
+  creator: "Operant Pharmacy Federation",
+  publisher: "DPU of Pharmacy",
   openGraph: {
     title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
     description:
-      "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
-    url: "https://ceo-conclave-2024.vercel.app/",
+      "Join the CEO Conclave 2024, organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation. Shape the future of the pharmaceuticals industry through innovation and excellence.",
+    url: "https://ceo.opf.org.in",
     siteName: "CEO Conclave 2024",
     images: [
       {
-        url: "https://ceo-conclave-2024.vercel.app/og-image.jpg",
+        url: "https://ceo.opf.org.in/og-image.jpg",
         width: 1200,
         height: 630,
+        alt: "CEO Conclave 2024 Banner",
       },
     ],
     locale: "en_US",
@@ -44,8 +54,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CEO Conclave 2024: Building a Culture of Innovation and Excellence",
     description:
-      "Join the CEO Conclave organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation to shape the future of the pharmaceuticals industry.",
-    images: ["https://ceo-conclave-2024.vercel.app/twitter-image.jpg"],
+      "Join the CEO Conclave 2024, organized by DPU of Pharmacy and hosted by the Operant Pharmacy Federation. Shape the future of the pharmaceuticals industry through innovation and excellence.",
+    images: ["https://ceo.opf.org.in/twitter-image.jpg"],
+    creator: "@OPF_Official",
   },
   robots: {
     index: true,
@@ -58,10 +69,8 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
+  alternates: {
+    canonical: "https://ceo.opf.org.in",
   },
 };
 
@@ -80,6 +89,18 @@ export default function RootLayout({
           <Analytics />
         </main>
         <Footer />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
