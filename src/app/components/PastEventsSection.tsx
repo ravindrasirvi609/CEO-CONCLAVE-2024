@@ -89,8 +89,7 @@ const PastEventsSection: React.FC = () => {
                   src={image.src}
                   alt={image.alt}
                   layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 hover:scale-105"
+                  className="transition-transform duration-300 hover:scale-105 object-cover"
                 />
               </div>
             </div>

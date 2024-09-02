@@ -7,19 +7,19 @@ import ContactSection from "./components/ContactSection";
 import OrganizationsSection from "./components/OrganizationsSection";
 import YouTubeVideosSection from "./components/YouTubeVideosSection";
 import PastEventsSection from "./components/PastEventsSection";
+import SpeakersSection from "./components/SpeakerSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F5E7B2]">
       <WelcomeSection />
       <AboutSection />
+      <SpeakersSection />
       <OrganizationsSection />
       <ScheduleSection />
       <PastEventsSection />
-
       <RegistrationSection />
       <YouTubeVideosSection />
-
       <ContactSection />
     </div>
   );
