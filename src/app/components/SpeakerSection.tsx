@@ -43,6 +43,11 @@ const speakers = [
     role: "CEO & Investor",
     image: "/Manish.jpeg",
   },
+  {
+    name: "Radhika Bajoria",
+    role: "Founder, Radically Yours",
+    image: "/Radhika.jpeg",
+  },
 ];
 
 const SpeakerCard = ({ name, role, image }: any) => (
