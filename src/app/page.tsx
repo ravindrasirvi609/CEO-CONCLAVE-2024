@@ -9,6 +9,7 @@ import OrganizationsSection from "./components/OrganizationsSection";
 import YouTubeVideosSection from "./components/YouTubeVideosSection";
 import PastEventsSection from "./components/PastEventsSection";
 import SpeakersSection from "./components/SpeakerSection";
+import CompanyLogosSection from "./components/CompanyLogosSection";
 
 export const metadata: Metadata = {
   title: "CEO Conclave 2024: Shaping the Future of Pharmaceuticals",
@@ -35,6 +36,8 @@ export default function Home() {
       <OrganizationsSection />
       <ScheduleSection />
       <PastEventsSection />
+      <CompanyLogosSection />
+
       <RegistrationSection />
       <YouTubeVideosSection />
       <ContactSection />

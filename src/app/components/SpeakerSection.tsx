@@ -48,6 +48,11 @@ const speakers = [
     role: "Founder, Radically Yours",
     image: "/Radhika.jpeg",
   },
+  {
+    name: "Dr. Rupali Paranjape",
+    role: "Founder, Blue Ocean Compliance, Vadodara, Gujarat",
+    image: "/Rupali.jpeg",
+  },
 ];
 
 const SpeakerCard = ({ name, role, image }: any) => (
