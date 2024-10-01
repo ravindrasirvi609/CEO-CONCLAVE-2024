@@ -44,14 +44,34 @@ const speakers = [
     image: "/Manish.jpeg",
   },
   {
-    name: "Radhika Bajoria",
-    role: "Founder, Radically Yours",
-    image: "/Radhika.jpeg",
-  },
-  {
     name: "Dr. Rupali Paranjape",
     role: "Founder, Blue Ocean Compliance, Vadodara, Gujarat",
     image: "/Rupali.jpeg",
+  },
+  {
+    name: "Dr. Sanjay Gade",
+    role: "Co-founder, Proexp Pharma Pvt. Ltd.",
+    image: "/SanjayGade.jpeg",
+  },
+  {
+    name: "Dr. Satya Vadlamani",
+    role: "CMD, Murlikrishna Pharm Private Limited",
+    image: "/satya.jpg",
+  },
+  {
+    name: "Mr. Vipul Kumar",
+    role: "Co-Founder & Director, Genexis Biotech Pvt. Ltd.",
+    image: "/vipul.jpeg",
+  },
+  {
+    name: "Mr. Manoj Krishna",
+    role: "Founder & Director, Crozair Technicea Pvt. Ltd., Mumbai",
+    image: "/manoj.jpg",
+  },
+  {
+    name: "Dr. Sandeep Arora",
+    role: "CEO cum Director, Ultra Drugs Pvt. Ltd.",
+    image: "/sandeep.jpeg",
   },
 ];
 
