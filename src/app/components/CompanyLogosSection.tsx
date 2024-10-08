@@ -5,6 +5,7 @@ import Image from "next/image";
 const logos = [
   { src: "/chronicle.png", alt: "chronicle" },
   { src: "/infusion.jpeg", alt: "Infusion" },
+  { src: "/fope.jpeg", alt: "FOPE" },
 ];
 const CompanyLogosSection = () => {
   const [isClient, setIsClient] = useState(false);

@@ -9,11 +9,6 @@ const speakers = [
     image: "/Madhu.jpeg",
   },
   {
-    name: "Asharaf K. Poil",
-    role: "Managing Director, Wellcare Group, Qatar",
-    image: "/Ashraf.jpeg",
-  },
-  {
     name: "Dr. Deepa Arora",
     role: "CEO, Clinexcel Life Science Private limited",
     image: "/Deepa.jpeg",
