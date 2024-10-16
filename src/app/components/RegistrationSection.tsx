@@ -309,7 +309,7 @@ const RegistrationSection: React.FC = () => {
                 <option value="student">Student (1770 ₹)</option>
                 <option value="teacher">Academia (2500 ₹)</option>
                 <option value="professional">
-                  Industry Professional (3500 ₹)
+                  Industry Professional (5000 ₹)
                 </option>
                 <option value="opfmembers">OPF Members (1500 ₹)</option>
               </select>
