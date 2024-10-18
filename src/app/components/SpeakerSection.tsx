@@ -18,11 +18,11 @@ const speakers = [
     role: "CEO, Expecto Health Science, Singapore",
     image: "/Pramod.jpeg",
   },
-  {
-    name: "Arjun Arora",
-    role: "CMD, Sharva International & Research Pvt. Ltd., A PPP with CSIR IIIM Ministry  of Science & Technology, Govt. of India",
-    image: "/Arjun.jpeg",
-  },
+  // {
+  //   name: "Arjun Arora",
+  //   role: "CMD, Sharva International & Research Pvt. Ltd., A PPP with CSIR IIIM Ministry  of Science & Technology, Govt. of India",
+  //   image: "/Arjun.jpeg",
+  // },
   {
     name: "Mrs. Maharukh Rustomjee",
     role: "Founder, Chief Scientist & Managing Partner  of R&D, Amaterasu Lifesciecnes LLP, Mumbai",
@@ -33,11 +33,11 @@ const speakers = [
     role: "Managing Director, Huntmetrics Private Limited",
     image: "/Ayub.jpeg",
   },
-  {
-    name: "Manish NN Vanvari",
-    role: "CEO & Investor",
-    image: "/Manish.jpeg",
-  },
+  // {
+  //   name: "Manish NN Vanvari",
+  //   role: "CEO & Investor",
+  //   image: "/Manish.jpeg",
+  // },
   {
     name: "Dr. Rupali Paranjape",
     role: "Founder, Blue Ocean Compliance, Vadodara, Gujarat",

@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -119,13 +120,28 @@ const WelcomeSection: React.FC = () => {
           <EventDetail icon={<FaMapMarkerAlt />} text="DPU Pharmacy, Pune" />
           <EventDetail icon={<FaUsers />} text="250+ Industry Leaders" />
         </div>
-        <div ref={buttonRef} className="text-center">
-          <a
+        <div
+          ref={buttonRef}
+          className="text-center flex flex-wrap justify-center gap-4 md:gap-8"
+        >
+          <Link
             href="#registration"
-            className="bg-[#E0A75E] text-[#6c0707] px-8 py-3 md:px-10 md:py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#6c0707] hover:text-[#E0A75E] transition duration-300 inline-block transform hover:scale-105"
+            className="bg-[#E0A75E] text-[#6c0707] px-8 py-3 p-2 md:px-10 md:py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#6c0707] hover:text-[#E0A75E] transition duration-300 inline-block transform hover:scale-105"
           >
             Register Now
-          </a>
+          </Link>
+          <Link
+            href="https://whatsapp.com/channel/0029Va93LYsA89MpBKbv992x"
+            className="bg-[#E0A75E] text-[#6c0707] px-8 py-3 md:px-10 md:py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#6c0707] hover:text-[#E0A75E] transition duration-300 inline-block transform hover:scale-105"
+          >
+            Photo Gallery & Videos
+          </Link>
+          <Link
+            href="#contact"
+            className="bg-[#E0A75E] text-[#6c0707] px-8 py-3 md:px-10 md:py-4 rounded-full text-lg md:text-xl font-semibold hover:bg-[#6c0707] hover:text-[#E0A75E] transition duration-300 inline-block transform hover:scale-105"
+          >
+            Location
+          </Link>
         </div>
       </div>
     </section>
