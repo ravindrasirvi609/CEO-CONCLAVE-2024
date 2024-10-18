@@ -4,6 +4,11 @@ import Image from "next/image";
 
 const speakers = [
   {
+    name: "Mr. Harish K. Jain",
+    role: "President FOPE & Director - Embiotic Laboratories (P) Ltd.",
+    image: "/harish.jpeg",
+  },
+  {
     name: "Dr. Madhu Nicholas",
     role: "Founder & CEO, Arobel Int. Pvt.Ltd.",
     image: "/Madhu.jpeg",
@@ -14,15 +19,36 @@ const speakers = [
     image: "/Deepa.jpeg",
   },
   {
+    name: "Mr. Chandan Bhar",
+    role: "Owner, B&BIP",
+    image: "/chandan.jpeg",
+  },
+  {
+    name: "Mr. Sadanand Shetty",
+    role: "Founder, Sindhu Organics",
+    image: "/Sadanand.jpeg",
+  },
+  {
+    name: "Mr. Muralidhar N Ingale",
+    role: "Director at Valeshvar Biotech Pvt. Limited",
+    image: "/murlidhar.jpg",
+  },
+  {
+    name: "Dr. Vaishali Tawde",
+    role: "Ex. Managing Director, Ideal Cures",
+    image: "/vaishali.jpeg",
+  },
+  {
     name: "Dr. Pramod Kashid",
     role: "CEO, Expecto Health Science, Singapore",
-    image: "/Pramod.jpeg",
+    image: "/pramod.jpeg",
   },
-  // {
-  //   name: "Arjun Arora",
-  //   role: "CMD, Sharva International & Research Pvt. Ltd., A PPP with CSIR IIIM Ministry  of Science & Technology, Govt. of India",
-  //   image: "/Arjun.jpeg",
-  // },
+
+  {
+    name: "Mr. Debasish M Banerjee",
+    role: "Managing Partner at Infusion Pharma Solutions",
+    image: "/debashish.webp",
+  },
   {
     name: "Mrs. Maharukh Rustomjee",
     role: "Founder, Chief Scientist & Managing Partner  of R&D, Amaterasu Lifesciecnes LLP, Mumbai",
@@ -33,11 +59,11 @@ const speakers = [
     role: "Managing Director, Huntmetrics Private Limited",
     image: "/Ayub.jpeg",
   },
-  // {
-  //   name: "Manish NN Vanvari",
-  //   role: "CEO & Investor",
-  //   image: "/Manish.jpeg",
-  // },
+  {
+    name: "Mr. Amit Panchal",
+    role: "Founder & CEO, DOW ENGIFAB LLP",
+    image: "/Amit.jpeg",
+  },
   {
     name: "Dr. Rupali Paranjape",
     role: "Founder, Blue Ocean Compliance, Vadodara, Gujarat",
@@ -54,6 +80,11 @@ const speakers = [
     image: "/satya.jpg",
   },
   {
+    name: "Dr. K. Someshwar",
+    role: "Co-Founder & Director, Bell Pharmaceuticals",
+    image: "/someshwar.jpeg",
+  },
+  {
     name: "Mr. Vipul Kumar",
     role: "Co-Founder & Director, Genexis Biotech Pvt. Ltd.",
     image: "/vipul.jpeg",
@@ -62,11 +93,6 @@ const speakers = [
     name: "Mr. Manoj Krishna",
     role: "Founder & Director, Crozair Technicea Pvt. Ltd., Mumbai",
     image: "/manoj.jpg",
-  },
-  {
-    name: "Dr. Sandeep Arora",
-    role: "CEO cum Director, Ultra Drugs Pvt. Ltd.",
-    image: "/sandeep.jpeg",
   },
 ];
 
