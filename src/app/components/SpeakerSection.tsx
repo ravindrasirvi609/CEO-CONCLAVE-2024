@@ -19,6 +19,16 @@ const speakers = [
     image: "/Deepa.jpeg",
   },
   {
+    name: "Mr. Manoj Krishna",
+    role: "Founder & Director, Crozair Technicea Pvt. Ltd., Mumbai",
+    image: "/manoj.jpg",
+  },
+  {
+    name: "Dr. K. Someshwar",
+    role: "Co-Founder & Director, Bell Pharmaceuticals",
+    image: "/someshwar.jpeg",
+  },
+  {
     name: "Mr. Chandan Bhar",
     role: "Owner, B&BIP",
     image: "/chandan.jpeg",
@@ -44,11 +54,6 @@ const speakers = [
     image: "/pramod.jpeg",
   },
 
-  {
-    name: "Mr. Debasish M Banerjee",
-    role: "Managing Partner at Infusion Pharma Solutions",
-    image: "/debashish.webp",
-  },
   {
     name: "Mrs. Maharukh Rustomjee",
     role: "Founder, Chief Scientist & Managing Partner  of R&D, Amaterasu Lifesciecnes LLP, Mumbai",
@@ -80,19 +85,15 @@ const speakers = [
     image: "/satya.jpg",
   },
   {
-    name: "Dr. K. Someshwar",
-    role: "Co-Founder & Director, Bell Pharmaceuticals",
-    image: "/someshwar.jpeg",
+    name: "Mr. Debasish M Banerjee",
+    role: "Managing Partner at Infusion Pharma Solutions",
+    image: "/debashish.webp",
   },
+
   {
     name: "Mr. Vipul Kumar",
     role: "Co-Founder & Director, Genexis Biotech Pvt. Ltd.",
     image: "/vipul.jpeg",
-  },
-  {
-    name: "Mr. Manoj Krishna",
-    role: "Founder & Director, Crozair Technicea Pvt. Ltd., Mumbai",
-    image: "/manoj.jpg",
   },
 ];
 
